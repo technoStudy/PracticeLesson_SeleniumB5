@@ -1,0 +1,21 @@
+Scenario:
+
+http://demo.nopcommerce.com/ sitesine gidiniz
+
+Register’a tiklayiniz.
+
+Gender seciniz
+
+First name giriniz
+
+Last name giriniz
+
+Email giriniz
+
+Company Name giriniz
+
+Password giriniz
+
+Password Confirm giriniz
+
+Register butonuna tiklayiniz.
