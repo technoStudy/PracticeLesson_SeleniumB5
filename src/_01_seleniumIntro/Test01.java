@@ -3,8 +3,9 @@ package src._01_seleniumIntro;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import utility.BaseDriver;
-import utility.MyFunction;
+import src.utility.BaseDriver;
+import src.utility.MyFunction;
+
 
 public class Test01 extends BaseDriver {
 
