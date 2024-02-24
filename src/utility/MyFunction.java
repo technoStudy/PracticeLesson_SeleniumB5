@@ -1,4 +1,4 @@
-package utility;
+package src.utility;
 
 public class MyFunction {
 
