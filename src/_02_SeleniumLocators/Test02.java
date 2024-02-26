@@ -8,26 +8,26 @@ import src.utility.MyFunction;
 
 public class Test02 extends BaseDriver {
     @Test
-    public void scenerio02(){
+    public void scenerio02() {
 
         driver.get("https://www.mediamarkt.com.tr/");
 
         WebElement quer = driver.findElement(By.name("query"));
         quer.sendKeys("Telefon");
-         MyFunction.wait(5);
-        WebElement search =driver.findElement(By.partialLinkText("APPLE iPhone 15 128 GB Akıllı "));
+        MyFunction.wait(5);
+        WebElement search = driver.findElement(By.partialLinkText("APPLE iPhone 15 128 GB Akıllı "));
         search.click();
 
-         WebElement add = driver.findElement(By.id("pdp-add-to-cart"));
-         add.click();
-         WebElement price = driver.findElement(By.className("item-price"));
-         System.out.println("Fiyat ;"+ price.getText());
-         MyFunction.wait(3);
-         WebElement continu = driver.findElement(By.id("continue"));
-         continu.click();
-         // WebElement home = driver.findElement(By.className("responsive ng-scope"));
-         // home.click();
-           driver.quit();
+        WebElement add = driver.findElement(By.id("pdp-add-to-cart"));
+        add.click();
+        WebElement price = driver.findElement(By.className("item-price"));
+        System.out.println("Fiyat ;" + price.getText());
+        MyFunction.wait(3);
+        WebElement continu = driver.findElement(By.id("continue"));
+        continu.click();
+        // WebElement home = driver.findElement(By.className("responsive ng-scope"));
+        // home.click();
+        driver.quit();
     }
 }
 // WebElement text1= driver.findElement(By.id("product-details"));
