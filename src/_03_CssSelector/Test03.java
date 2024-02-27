@@ -1,13 +1,12 @@
-package src._03_SeleniumLocators_2;
+package src._03_CssSelector;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
 import src.utility.BaseDriver;
 import src.utility.MyFunction;
 
-public class nopcommerce extends BaseDriver {
+public class Test03 extends BaseDriver {
 
     @Test
     public void nopCommerce() {

@@ -1,4 +1,4 @@
-package src._02_SeleniumLocators;
+package src._02_Locators;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
