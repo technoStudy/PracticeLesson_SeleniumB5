@@ -2,3 +2,5 @@
 
  ## Selenium Intro
  ## Finding Locators
+ ## CSS Selector
+ ## XPath
