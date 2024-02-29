@@ -82,7 +82,8 @@ public class Test05 extends BaseDriver {
         registerButton.click();
 
         WebElement confirmMessage = driver.findElement(By.xpath("//div[@class='result']"));
-        Assert.assertTrue(confirmMessage.isDisplayed());
+        Assert.assertTrue("Not confirmed",confirmMessage.getText().contains("Your registration completed"));
+       // Assert.assertTrue(confirmMessage.isDisplayed());
 
         waitAndClose();
     }
