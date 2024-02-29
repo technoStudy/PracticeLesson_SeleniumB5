@@ -40,10 +40,10 @@ public class Test04 extends BaseDriver {
         WebElement product=driver.findElement(By.xpath("//a[text()='Beats Pill 2.0 Wireless Speaker']"));
 
         /*
-➢ Sayfada gözüken urunun Baslığının “Beats Pill” yazısını içerdiğini doğrulayınız.
-➢ Ürüne tıklayınız.
-➢ ADD TO CART Butonuna tıklayınız.
-➢ Urunun başarılı bir şekilde Sepete eklendiğini doğrulayınız.
+        ➢ Sayfada gözüken urunun Baslığının “Beats Pill” yazısını içerdiğini doğrulayınız.
+        ➢ Ürüne tıklayınız.
+        ➢ ADD TO CART Butonuna tıklayınız.
+        ➢ Urunun başarılı bir şekilde Sepete eklendiğini doğrulayınız.
          */
     }
 }

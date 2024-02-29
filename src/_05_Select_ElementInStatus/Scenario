@@ -1,0 +1,27 @@
+Scenario:
+
+http://demo.nopcommerce.com/ sitesine gidiniz
+
+Register’a tiklayiniz.
+
+Gender seciniz
+
+Gender seçili olduğunu doğrulayınız.
+
+First name giriniz
+
+Last name giriniz
+
+Doğum tarihini Selenium select metodu kullanarak doldurunuz. (3 Nisan 1920)
+
+Email giriniz
+
+Company Name giriniz
+
+Password giriniz
+
+Passwordu tekrar giriniz
+
+Register butonuna tiklayiniz
+
+İşlemin gerçekleştiğine dair mesajın görüldüğünü doğrulayınız.
