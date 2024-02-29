@@ -9,7 +9,6 @@ import src.utility.BaseDriver;
 public class Test04 extends BaseDriver {
 
     @Test
-
     public void xpathTest() {
 
         driver.get("http://demo.nopcommerce.com/");
@@ -38,12 +37,19 @@ public class Test04 extends BaseDriver {
         searchButton.click();
 
         WebElement product=driver.findElement(By.xpath("//a[text()='Beats Pill 2.0 Wireless Speaker']"));
+        Assert.assertTrue("Not confirmed", product.getText().contains("Beats Pill"));
+        Assert.assertTrue(product.isDisplayed());;
+        product.click();
 
-        /*
-        ➢ Sayfada gözüken urunun Baslığının “Beats Pill” yazısını içerdiğini doğrulayınız.
-        ➢ Ürüne tıklayınız.
-        ➢ ADD TO CART Butonuna tıklayınız.
-        ➢ Urunun başarılı bir şekilde Sepete eklendiğini doğrulayınız.
-         */
+        WebElement addToCart= driver.findElement(By.xpath("//button[contains(@id,'add-to-cart')]"));
+        addToCart.click();
+
+        WebElement shoppingCart= driver.findElement(By.xpath("//a[text()='shopping cart']"));
+        shoppingCart.click();
+
+        WebElement confirmCart=driver.findElement(By.xpath("(//a[text()='Beats Pill 2.0 Wireless Speaker'])[2]"));
+        Assert.assertTrue(confirmCart.isDisplayed());
+
+        waitAndClose();
     }
 }
