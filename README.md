@@ -4,3 +4,5 @@
  ## Finding Locators
  ## CSS Selector
  ## XPath
+ ## Select
+ ## Element In Status
