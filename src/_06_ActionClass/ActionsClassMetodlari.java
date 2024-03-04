@@ -1,4 +1,4 @@
-package src._06_Action_Class;
+package src._06_ActionClass;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -12,6 +12,7 @@ import java.time.Duration;
 public class ActionsClassMetodlari extends BaseDriver {
     @Test
     public void action1(){
+
         Actions actions = new Actions(driver);
 
         //Mouse Hover (Fare Üzerine Gelme):
@@ -98,6 +99,5 @@ public class ActionsClassMetodlari extends BaseDriver {
         //Mouse Scroll To Element:
         WebElement element3 = driver.findElement(By.id("elementId"));
         actions.moveToElement(element3).perform(); // Elemente doğru sayfayı kaydırma
-
     }
 }

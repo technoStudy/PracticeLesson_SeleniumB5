@@ -1,4 +1,4 @@
-package src._06_Action_Class;
+package src._06_ActionClass;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -8,8 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import src.utility.BaseDriver;
 import src.utility.MyFunction;
-
-import javax.swing.*;
 
 public class ActionClass extends BaseDriver {
 
@@ -54,7 +52,5 @@ public class ActionClass extends BaseDriver {
         //aksiyonDriver.perform();
         MyFunction.wait(3);
         driver.quit();
-
-
     }
 }
