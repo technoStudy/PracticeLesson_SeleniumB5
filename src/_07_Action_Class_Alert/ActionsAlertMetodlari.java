@@ -7,6 +7,7 @@ import src.utility.BaseDriver;
 
 public class ActionsAlertMetodlari extends BaseDriver {
     public void alert1(){
+
         Actions actions = new Actions(driver);
 
         //Java Selenium'da Alert işlemleri, web sayfalarında görünen JavaScript alert, confirm veya
@@ -72,8 +73,5 @@ public class ActionsAlertMetodlari extends BaseDriver {
 //
 //        // Alert'i reddedelim
 //        alert.dismiss();
-
-
-
     }
 }
