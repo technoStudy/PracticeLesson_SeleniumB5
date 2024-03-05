@@ -12,7 +12,7 @@ import src.utility.MyFunction;
 public class ActionClass extends BaseDriver {
 
     @Test
-    public void actionsMethods() throws AWTException {
+    public void actionsMethods(){
 
         driver.get("https://the-internet.herokuapp.com/");
         driver.manage().window().setPosition(new Point(-1000, 0));
