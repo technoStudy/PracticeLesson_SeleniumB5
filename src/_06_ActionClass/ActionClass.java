@@ -47,12 +47,12 @@ public class ActionClass extends BaseDriver {
         aksiyonDriver.sendKeys(Keys.ENTER).build();
         MyFunction.wait(1);
 
-       // aksiyonDriver.perform();
-        aksiyonDriver.click(rightClick).build();
-        aksiyonDriver.perform();
+        // aksiyonDriver.perform();
 
         //aksiyonDriver.perform();
         MyFunction.wait(3);
         driver.quit();
+
+
     }
 }
