@@ -10,11 +10,13 @@ import src.utility.BaseDriver;
 import src.utility.MyFunction;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 public class ActionClass extends BaseDriver {
 
     @Test
-    public void actionsMethods() {
+    public void actionsMethods() throws AWTException {
 
         driver.get("https://the-internet.herokuapp.com/");
         driver.manage().window().setPosition(new Point(-1000, 0));
@@ -48,8 +50,8 @@ public class ActionClass extends BaseDriver {
         MyFunction.wait(3);
         aksiyonDriver.sendKeys(Keys.ENTER).build();
         MyFunction.wait(1);
-        aksiyonDriver.click(rightClick).build();
-        aksiyonDriver.perform();
+
+       // aksiyonDriver.perform();
 
         //aksiyonDriver.perform();
         MyFunction.wait(3);
