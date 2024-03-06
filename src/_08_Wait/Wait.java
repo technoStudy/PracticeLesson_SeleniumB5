@@ -14,14 +14,6 @@ import java.util.List;
 
 public class Wait extends BaseDriver {
 
-    /*
-  Task 2:
-  "https://qatest.twoplugs.com/" sitesine gidiniz.
-  What do I need to sign up?  sorusuna tiklatiniz.
-  "You need a facebook account or a valid email address to sign up." texti görülene kadar bekletiniz.
-  Text'in göründüğünü doğrulayınız.
-     */
-
     @Test
     public void test01() {
 
@@ -52,12 +44,6 @@ public class Wait extends BaseDriver {
     @Test
     public void test02() {
 
-        /*
-          Task 3:
-   "https://google.com/"  sitesine gidiniz.
-   Search kısmına "selenium" yazıp Enter'a basiniz.
-   Sonuclar kısmındaki ilk sonucun "selenium" kelimesini içerdiğini doğrulayınız.
-         */
         driver.get("https://google.com/");
 
         List<WebElement> rejectAll=driver.findElements(By.xpath("//button[@id='W0wltc']/div"));
@@ -80,6 +66,26 @@ public class Wait extends BaseDriver {
 
 
         Assert.assertEquals("Selenium",theFirstLink.getText());
+
+        waitAndClose();
+    }
+
+    @Test
+    public void test3() {
+
+        driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
+
+        WebElement clickMe = driver.findElement(By.xpath("//*[text()='Click me to start timer']"));
+        clickMe.click();
+
+        // The first method
+        WebElement webDriverText = driver.findElement(By.xpath("//p[text()='WebDriver']"));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='WebDriver']")));
+
+        // The second method
+        // WebElement webDriverText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='WebDriver']")));
+
+        Assert.assertTrue(webDriverText.getText().contains("WebDriver"));
 
         waitAndClose();
     }
