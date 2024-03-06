@@ -1,0 +1,31 @@
+
+Explicit Wait:
+
+Explicit Wait, belirli bir koşulun gerçekleşmesini beklemek için kullanılan bir bekleme mekanizmasıdır.
+Bu koşul, örneğin bir elementin görünür olması, tıklanabilir olması veya belirli bir metin içermesi gibi bir durum olabilir.
+Explicit Wait, belirli bir elementin yüklenmesini veya belirli bir durumun gerçekleşmesini beklemek için kullanışlıdır.
+
+Java Selenium'da Explicit Wait kullanırken aşağıdaki adımları takip edebilirsiniz:
+
+1. WebDriverWait sınıfını ve ilgili koşul sınıflarını (ExpectedConditions) içeren gerekli kütüphaneleri içe aktarın.
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+
+2. WebDriverWait nesnesini oluşturun ve beklemek istediğiniz WebDriver nesnesini ve maksimum bekleme süresini belirtin.
+
+WebDriverWait wait = new WebDriverWait(driver, 30);
+
+
+3. Belirli bir koşulun gerçekleşmesini beklemek için "until" yöntemini kullanın ve beklemek istediğiniz koşulu belirtin.
+Koşul, ExpectedConditions sınıfının sağladığı bir dizi önceden tanımlanmış koşuldan biri olabilir.
+
+WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("elementId")));
+
+
+Yukarıdaki örnekte, "visibilityOfElementLocated" metodu, belirtilen elementin görünür olmasını bekler.
+Eğer element belirtilen süre içinde görünür hale gelmezse, bir hata fırlatılır.
+
+Bu şekilde Explicit Wait kullanarak, belirli bir elementin yüklenmesini veya belirli bir durumun gerçekleşmesini bekleyebilirsiniz.
+Bu, test senaryolarınızı daha güvenilir hale getirir ve beklenen davranışları doğrulamanıza yardımcı olur.
