@@ -15,28 +15,26 @@ import java.util.List;
 public class Wait extends BaseDriver {
 
     @Test
-    public void test01() {
+    public void test1() {
 
-        driver.get("https://qatest.twoplugs.com/");
+        driver.get(" https://qatest.twoplugs.com/");
 
-        WebElement improved = driver.findElement(By.xpath("//button[@id='details-button']"));
+        WebElement improved = driver.findElement(By.xpath("//*[@id='details-button']"));
         improved.click();
 
-        WebElement moveOn = driver.findElement(By.xpath("//a[@id='proceed-link']"));
+        WebElement moveOn = driver.findElement(By.xpath("//*[@id='proceed-link']"));
         moveOn.click();
 
-        WebElement text = driver.findElement(By.xpath("//span[text()='What do I need to sign up?']"));
-        wait.until(ExpectedConditions.elementToBeClickable(text));
-        text.click();
+        WebElement element = driver.findElement(By.xpath("//span[text()='What do I need to sign up?']"));
+        wait.until(ExpectedConditions.elementToBeClickable(element)).click();
 
-        WebElement newText = driver.findElement(By.xpath("//p[text()='You need a facebook account or a valid email address to sign up.']"));
-        wait.until(ExpectedConditions.visibilityOf(newText));
+        WebElement text = driver.findElement(By.xpath("//p[text()='You need a facebook account or a valid email address to sign up.']"));
+        wait.until(ExpectedConditions.visibilityOf(text));
 
         // The first method
-        Assert.assertEquals("You need a facebook account or a valid email address to sign up.", newText.getText());
-
+        Assert.assertEquals("You need a facebook account or a valid email address to sign up.", text.getText());
         // The second method
-        Assert.assertTrue(newText.isDisplayed());
+        Assert.assertTrue(text.isDisplayed());
 
         waitAndClose();
     }
