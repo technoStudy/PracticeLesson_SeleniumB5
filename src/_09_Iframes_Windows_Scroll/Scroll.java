@@ -12,20 +12,20 @@ import java.util.ArrayList;
 public class Scroll extends BaseDriver {
 
     @Test
-    public void scrollTest(){
+    public void scrollTest() {
 
         driver.get("https://the-internet.herokuapp.com/infinite_scroll");
 
-        ArrayList<String>arrayList=new ArrayList<>();
+        ArrayList<String> arrayList = new ArrayList<>();
         WebElement text;
-        JavascriptExecutor js=(JavascriptExecutor)driver;
+        JavascriptExecutor js = (JavascriptExecutor) driver;
 
-        for (int i = 1; i <11 ; i++) {
+        for (int i = 1; i < 11; i++) {
             MyFunction.wait(1);
-            text= driver.findElement(By.xpath("(//div[@class='jscroll-added'])["+i+"]"));
-            arrayList.add(i-1,text.getText());
+            text = driver.findElement(By.xpath("(//div[@class='jscroll-added'])[" + i + "]"));
+            arrayList.add(i - 1, text.getText());
             js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-            System.out.println(i+"."+"Paragraf : " + arrayList.get(i-1));
+            System.out.println(i + ". Paragraf : " + arrayList.get(i - 1));
         }
         waitAndClose();
     }
