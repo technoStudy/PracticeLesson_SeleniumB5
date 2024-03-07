@@ -1,4 +1,4 @@
-package src._07_Action_Class_Alert;
+package src._07_ActionClass_Alert;
 
 import org.junit.Test;
 import org.openqa.selenium.Alert;
