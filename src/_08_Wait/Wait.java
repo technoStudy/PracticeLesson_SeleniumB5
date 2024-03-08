@@ -70,24 +70,4 @@ public class Wait extends BaseDriver {
 
         waitAndClose();
     }
-
-    @Test
-    public void test3() {
-
-        driver.get("http://seleniumpractise.blogspot.com/2016/08/how-to-use-explicit-wait-in-selenium.html");
-
-        WebElement clickMe = driver.findElement(By.xpath("//*[text()='Click me to start timer']"));
-        clickMe.click();
-
-        // The first method
-        WebElement webDriverText = driver.findElement(By.xpath("//p[text()='WebDriver']"));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='WebDriver']")));
-
-        // The second method
-        // WebElement webDriverText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[text()='WebDriver']")));
-
-        Assert.assertTrue(webDriverText.getText().contains("WebDriver"));
-
-        waitAndClose();
-    }
 }

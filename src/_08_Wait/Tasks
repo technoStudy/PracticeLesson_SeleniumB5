@@ -10,9 +10,5 @@
   Search kısmına "Selenium" yazıp Enter'a basiniz.
    Sonuclar kısmındaki ilk sonucun "selenium" kelimesini içerdiğini doğrulayınız.
 
-  Task 3:
-  "http://seleniumpractise.blogspot.in/2016/08/how-to-use-explicit-_13_Wait-in-selenium.html" sitesine gidiniz.
-  Click me to start timer butonuna tıklatınız.
-  Webdriver yazısının göründüğünü doğrulayınız.
 
 
