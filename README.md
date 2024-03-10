@@ -6,3 +6,9 @@
  ## XPath
  ## Select
  ## Element In Status
+ ## Action Class
+ ## Alert
+ ## Wait
+ ## Iframe
+ ## Windows
+ ## Scroll
