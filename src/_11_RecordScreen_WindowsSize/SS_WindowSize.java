@@ -1,4 +1,4 @@
-package src._11_EkranKaydetme_WindowsSize;
+package src._11_RecordScreen_WindowsSize;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.List;
 
 import static src.utility.BaseDriver.driver;
-import static src.utility.BaseDriver.wait;
 
 public class SS_WindowSize {
     @Test

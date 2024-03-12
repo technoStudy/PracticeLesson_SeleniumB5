@@ -13,3 +13,5 @@
  ## Windows
  ## Scroll
  ## Robot
+ ## Record Screen
+ ## Windows Size
